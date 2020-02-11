@@ -152,9 +152,9 @@
             minutes,
             seconds,
             cd = document.querySelectorAll(elt);
-            parameters.year=2020
-            parameters.month=2
-            parameters.day=19
+            // parameters.year=2020
+            // parameters.month=2
+            // parameters.day=19
         targetTmpDate = new Date(
             parameters.year,
             parameters.month - 1,
@@ -163,6 +163,8 @@
             parameters.minutes,
             parameters.seconds
         );
+        console.log(targetTmpDate);
+        
         console.log(parameters);
 
 
