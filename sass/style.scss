@@ -697,7 +697,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	li {
 		display: block;
 		padding: 0;
-		margin: 0 0 10px 1%;
+		// margin: 0 0 10px 1%;
 		list-style: none;
 		min-height: 400px;
 		background-position: center center;
@@ -765,7 +765,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			}
 		}
 		&.one-third {
-			width: 32.3%;
+			width: 33.3%;
 			@media screen and (max-width: $screen-sm) {
 				width: 49%;	
 			}
