@@ -66,25 +66,7 @@
 
 	</head>
 	<body>
-		<script>
-			window.onload = function() {
-				document.addEventListener('click', musicPlay);
-function musicPlay() {
-	
-    document.getElementById('wa').play();
-    document.removeEventListener('click', musicPlay);
-}
-setTimeout('click', 1000);
-			}
-			</script>
-		<iframe src="./images/song.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay loop   id="wa" src="./images/song.mp3">
-</audio>
-		<!-- <audio   src="./images/song.mp3" autoplay>
 		
-		  Your browser does not support the audio element.
-		  </audio>	 -->
-		  <!-- <embed name="GoodEnough" src="./images/song.mp3" loop="true" width="150" height="90" autostart="true"> -->
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
@@ -100,32 +82,27 @@ setTimeout('click', 1000);
 		</div>
 	</nav>
 
-	<div  id="fh5co-started" class="fh5co-bg" style="background-image:url(images/Doggie-Birthday-Cake-Website-Thumbnail.webp);">
-		
+	<div  id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Leave a message for maii?</h2>
-					<p>Tell her your memories <p>&#x1F607</p></p>
-					<p>سيب رسالتك هنا</p>
+					<h2>type your password</h2>
+					
 				</div>
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
 					<form class="form-inline" >
 						<div class="col-md-2 col-sm-4">
+						</div>
+						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
+								<label for="name" class="sr-only">password</label>
+								<input type="password" class="form-control" id="name" placeholder="Password">
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-4">
-							<div class="form-group">
-								<label for="message" class="sr-only">Message</label>
-								<input type="name" class="form-control" id="message" placeholder="Message">
-							</div>
-						</div>
+					
 						<div class="col-md-4 col-sm-4">
 							<button  class="btn btn-default btn-block" onclick="add(document.getElementById('name').value,document.getElementById('message').value)">Submit</button>
 						</div>
