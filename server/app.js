@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser');
 
 var db = require('diskdb');
-db.connect('.', ['memoMessages']);
+db.connect('.', ['articles']);
   
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); //<-- you can change this with a specific url like http://localhost:4200
