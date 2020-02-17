@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/maii2', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/maii', {useNewUrlParser: true});
 
 
 var db = mongoose.connection;
