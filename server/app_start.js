@@ -1,9 +1,28 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/maii', {useNewUrlParser: true});
 
-var db = require('diskdb');
-db.connect('.', ['memoMessages']);
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.log("we are connected");
+  
+});
+var kittySchema = new mongoose.Schema({
+    name: String,
+    message:String
+  });
+ 
+  
+  var Kitten = mongoose.model('Kitten', kittySchema);
+
+
+
+  
   
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); //<-- you can change this with a specific url like http://localhost:4200
@@ -21,13 +40,15 @@ app.use(bodyParser.json());
 
 
 app.post('/log', function (req, res) {
- 
+  console.log(req.body);
+  var fluffy = new Kitten({ name: req.body.name ,message: req.body.message});
 
-  var mes = { name: req.body.name ,message: req.body.message}
-db.articles.save(mes);
+
+  fluffy.save(function (err, fluffy) {
+    if (err) return console.error(err);
    console.log("data saved");
    
- 
+  });
   res.send('hello !!')
 
 });
@@ -35,12 +56,11 @@ app.get('/mess', function (req, res) {
   
   
    
-  var x=db.articles.find();
-  console.log(x);
-  
-    res.send(x)
+  Kitten.find(function (err, kittens) {
+    if (err) return console.error(err);
+    res.send(kittens)
 
-  
+  })
 
 });
 
