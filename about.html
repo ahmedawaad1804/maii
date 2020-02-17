@@ -225,7 +225,9 @@
 	</div>
 	<script>
 		 var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://localhost:4000/mess", false ); // false for synchronous request
+	xmlHttp.open( "GET", "http://maiielmaleh.club:4000/mess", false ); // false for synchronous request
+xmlHttp.setRequestHeader("Content-type", "application/json");
+	
     xmlHttp.send( null );
      
 console.log(xmlHttp.responseText);
