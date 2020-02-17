@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test5', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/maii2', {useNewUrlParser: true});
 
 
 var db = mongoose.connection;
@@ -52,14 +52,16 @@ app.post('/log', function (req, res) {
   res.send('hello !!')
 
 });
-app.post('/auth', function (req, res) {
-    
+app.get('/mess', function (req, res) {
+  
+  
+   
   Kitten.find(function (err, kittens) {
     if (err) return console.error(err);
     res.send(kittens)
 
   })
-    
+
 });
 
 

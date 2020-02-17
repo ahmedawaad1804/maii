@@ -8,7 +8,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Maii El-Maleh &mdash; 26th birthday</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
@@ -99,12 +98,12 @@
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">password</label>
-								<input type="password" class="form-control" id="name" placeholder="Password">
+								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
 						</div>
 					
 						<div class="col-md-4 col-sm-4">
-							<button  class="btn btn-default btn-block" onclick="add(document.getElementById('name').value,document.getElementById('message').value)">Submit</button>
+							<button  class="btn btn-default btn-block" onclick="add(document.getElementById('password').value)">Submit</button>
 						</div>
 					</form>
 				</div>
@@ -120,14 +119,15 @@
 	</div>
 	<script>
 		
-	 function add(name1,message1) {
+	 function add(pass) {
+		alert("no")
+
+		event.stopPropagation();
+		// if(pass=="2812020"){
+			location.href = 'index.html';
+			alert("yes")
+
 		
-		var data = {name:name1,message:message1}
-		data=JSON.stringify(data)
-var xmlHttp = new XMLHttpRequest();
-xmlHttp.open("POST", "http://localhost:4000/log", false); // false for synchronous request
-xmlHttp.setRequestHeader("Content-type", "application/json");
-xmlHttp.send(data);
         }
 	</script>
 	<!-- jQuery -->

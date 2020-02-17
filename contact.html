@@ -77,7 +77,6 @@ function musicPlay() {
 setTimeout('click', 1000);
 			}
 			</script>
-		<iframe src="./images/song.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 <audio autoplay loop   id="wa" src="./images/song.mp3">
 </audio>
 		<!-- <audio   src="./images/song.mp3" autoplay>
@@ -151,7 +150,29 @@ var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("POST", "http://localhost:4000/log", false); // false for synchronous request
 xmlHttp.setRequestHeader("Content-type", "application/json");
 xmlHttp.send(data);
-        }
+// fetch("http://localhost:4000/log",{ 
+//     method: 'POST', 
+//     body: data,
+// 	headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       },
+// })
+//   .then((resp) => resp.json()) // Transform the data into json
+//   .then(function(data) {
+//     console.log(data);
+	
+//     })
+  
+
+
+
+
+
+
+
+
+}
 	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
